@@ -64,3 +64,25 @@
 // console.log(intro.age);
 
 //! Task 4
+
+
+
+function Area(name, gender, address, education, profession){
+    this.name = name;
+    this.gender = gender;
+    this.address = address;
+    this.education = education;
+    this.profession = profession;
+    
+}
+
+function myfun(){
+    var personName = document.getElementById("name").value;
+    var address = document.getElementById("address").value;
+    var education = document.getElementById("education").value;
+    var profession = document.getElementById("profession").value;
+
+
+    const myArea = new Area(personName, 23, address, education, profession);
+    console.log(myArea);
+}
