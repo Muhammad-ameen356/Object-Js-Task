@@ -1,4 +1,4 @@
-//! Task 1
+//// ! Task 1
 // var itemArray = [
 //     {
 //         name: "juice",
@@ -27,13 +27,15 @@
 // var cal3 = (itemArray[2].price * itemArray[2].quantity);
 // var cal4 = (itemArray[3].price * itemArray[3].quantity);
 
+// var allItems = (cal1 + cal2 + cal3 + cal4);
+
 // console.log(cal1);
 // console.log(cal2);
 // console.log(cal3);
 // console.log(cal4);
+// console.log(allItems);
 
-
-//! Task 2
+////! Task 2
 // var obj = {
 //     name: "ameen",
 //     email: "muhammadameenh1@gmail.com",
@@ -50,8 +52,7 @@
 //     console.log("Not found");
 // }
 
-
-//! Task 3
+////! Task 3
 
 // function Ameen(first, last, age, country){
 //     this.firstName = first;
@@ -60,29 +61,41 @@
 //     this.country = country;
 // }
 
-// const intro = new Ameen("Muhammad", "Ameen", 18, "Pakistan")
+// const introSir = new Ameen("Ishaq", "Bhojani", 20, "Pakistan")
+// const introAmeen = new Ameen("Muhammad", "Ameen", 18, "Pakistan");
+// const introZahid = new Ameen("Muhammad", "Zahid", 24, "Pakistan")
+
 // console.log(intro.age);
 
-//! Task 4
+////! Task 4
 
-
-
-function Area(name, gender, address, education, profession){
+function Area(name, gender, address, education, profession) {
     this.name = name;
     this.gender = gender;
     this.address = address;
     this.education = education;
     this.profession = profession;
-    
 }
 
-function myfun(){
+function myfun() {
     var personName = document.getElementById("name").value;
     var address = document.getElementById("address").value;
     var education = document.getElementById("education").value;
     var profession = document.getElementById("profession").value;
 
+    if ((personName.length && address.length && education.length && profession.length) == 0) {
+        console.log("Please fill all the field correctly");
+    } else {
+        var gender1 = document.getElementById("male");
+        var gender2 = document.getElementById("female");
 
-    const myArea = new Area(personName, 23, address, education, profession);
-    console.log(myArea);
+        if (gender1.checked) {
+            var a = "male";
+        } else if (gender2.checked) {
+            var a = "female";
+        }
+
+        const myArea = new Area(personName, a, address, education, profession);
+        console.log(myArea);
+    }
 }
